@@ -1,0 +1,25 @@
+local window = Rayfield:CreateWindow({
+    name = "Kst Hub",
+    subtitle = "Kst Hub By Inky",
+    theme = "cobalt",
+})
+
+local hometab = window:CreateTab({ name = "Home", icon = 93364949241311 })
+
+hometab:CreateSection({ name = "Featured", icon = 93364949241311 })
+
+hometab:CreateButton({
+    name = "Ghost Hub",
+    callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
+    end,
+})
+
+local hubswithkeystab = window:CreateTab({ name = "Hubs With Keys", icon = 93364949241311 })
+
+hubswithkeystab:CreateSection({ name = "Hubs", icon = 93364949241311 })
+
+hubswithkeysTab:CreateButton({ Name = "Ghost Hub", Callback = function() 
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
+end })
+
