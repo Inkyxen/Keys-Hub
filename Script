@@ -1,32 +1,33 @@
 local window = Rayfield:CreateWindow({
-    Name = "Kst Hub", -- Fixed lowercase 'name' to uppercase 'Name'
-    LoadingTitle = "Kst Hub", -- Rayfield requires a LoadingTitle
-    LoadingSubtitle = "By Inky", -- Rayfield uses LoadingSubtitle, not subtitle
-    ConfigurationSaving = {
-        Enabled = false
-    },
-    Discord = {
-        Enabled = false
-    },
-    KeySystem = false -- Set to true if you want an actual key system window later
+    Name = "Kst Hub", -- Rayfield uses uppercase 'Name'
+    LoadingTitle = "Kst Hub", -- Required parameter
+    LoadingSubtitle = "By Inky", -- Replaces 'subtitle'
+    ConfigurationSaving = { Enabled = false },
+    Discord = { Enabled = false },
+    KeySystem = false
 })
 
-local hometab = window:CreateTab({ Name = "Home", Icon = 93364949241311 }) -- Fixed casing to 'Name' and 'Icon'
+-- HOME TAB
+local hometab = window:CreateTab({ Name = "Home", Icon = 93364949241311 }) -- Capitalized Name and Icon
 
-hometab:CreateSection({ Name = "Featured", Icon = 93364949241311 }) -- Fixed casing to 'Name' and 'Icon'
+hometab:CreateSection({ Name = "Featured", Icon = 93364949241311 })
 
 hometab:CreateButton({
-    Name = "Ghost Hub", -- Fixed casing to 'Name'
-    Callback = function() -- Fixed casing to 'Callback'
+    Name = "Ghost Hub",
+    Callback = function() -- Capitalized Callback
         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
     end,
 })
 
-local hubswithkeystab = window:CreateTab({ Name = "Hubs With Keys", Icon = 93364949241311 }) -- Fixed casing
+-- HUBS WITH KEYS TAB
+local hubswithkeystab = window:CreateTab({ Name = "Hubs With Keys", Icon = 93364949241311 })
 
-hubswithkeystab:CreateSection({ Name = "Hubs", Icon = 93364949241311 }) -- Fixed casing
+hubswithkeystab:CreateSection({ Name = "Hubs", Icon = 93364949241311 })
 
--- Fixed capitalization error: changed 'hubswithkeysTab' to match 'hubswithkeystab'
-hubswithkeystab:CreateButton({ Name = "Ghost Hub", Callback = function() 
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
-end })
+-- Fixed variable capitalization typo from hubswithkeysTab to hubswithkeystab
+hubswithkeystab:CreateButton({ 
+    Name = "Ghost Hub", -- Renamed this to match your earlier prompt, change if needed!
+    Callback = function() 
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
+    end 
+})
