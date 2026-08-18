@@ -1,25 +1,32 @@
 local window = Rayfield:CreateWindow({
-    name = "Kst Hub",
-    subtitle = "Kst Hub By Inky",
-    theme = "cobalt",
+    Name = "Kst Hub", -- Fixed lowercase 'name' to uppercase 'Name'
+    LoadingTitle = "Kst Hub", -- Rayfield requires a LoadingTitle
+    LoadingSubtitle = "By Inky", -- Rayfield uses LoadingSubtitle, not subtitle
+    ConfigurationSaving = {
+        Enabled = false
+    },
+    Discord = {
+        Enabled = false
+    },
+    KeySystem = false -- Set to true if you want an actual key system window later
 })
 
-local hometab = window:CreateTab({ name = "Home", icon = 93364949241311 })
+local hometab = window:CreateTab({ Name = "Home", Icon = 93364949241311 }) -- Fixed casing to 'Name' and 'Icon'
 
-hometab:CreateSection({ name = "Featured", icon = 93364949241311 })
+hometab:CreateSection({ Name = "Featured", Icon = 93364949241311 }) -- Fixed casing to 'Name' and 'Icon'
 
 hometab:CreateButton({
-    name = "Ghost Hub",
-    callback = function()
+    Name = "Ghost Hub", -- Fixed casing to 'Name'
+    Callback = function() -- Fixed casing to 'Callback'
         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
     end,
 })
 
-local hubswithkeystab = window:CreateTab({ name = "Hubs With Keys", icon = 93364949241311 })
+local hubswithkeystab = window:CreateTab({ Name = "Hubs With Keys", Icon = 93364949241311 }) -- Fixed casing
 
-hubswithkeystab:CreateSection({ name = "Hubs", icon = 93364949241311 })
+hubswithkeystab:CreateSection({ Name = "Hubs", Icon = 93364949241311 }) -- Fixed casing
 
-hubswithkeysTab:CreateButton({ Name = "Ghost Hub", Callback = function() 
+-- Fixed capitalization error: changed 'hubswithkeysTab' to match 'hubswithkeystab'
+hubswithkeystab:CreateButton({ Name = "Ghost Hub", Callback = function() 
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
 end })
-
